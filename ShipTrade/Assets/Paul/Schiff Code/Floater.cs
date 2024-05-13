@@ -11,10 +11,20 @@ public class Floater : MonoBehaviour
     public float waterDrag = 0.99f;
     public float waterAngularDrag = 0.5f;
 
+    private Vector3 gravityForce;
+
     // Start is called before the first frame update
     void Start()
     {
-
+        if (rigidBody == null)
+        {
+            rigidBody = GetComponent<Rigidbody>();
+            if (rigidBody == null)
+            {
+                Debug.LogError("No Rigidbody component found!");
+            }
+        }
+        gravityForce = Physics.gravity / floaterCount;
     }
 
     // Update is called once per frame
@@ -24,8 +34,21 @@ public class Floater : MonoBehaviour
     }
     private void FixedUpdate()
     {
+        ApplyGravity();
+        ApplyBuoyancy();
+
         rigidBody.AddForceAtPosition(Physics.gravity / floaterCount, transform.position, ForceMode.Acceleration);
 
+    }
+    // wird die Gravitation angewendet
+    void ApplyGravity()
+    {
+        rigidBody.AddForceAtPosition(gravityForce, transform.position, ForceMode.Acceleration);
+    }
+    // Wird die Antriebskraft berechnet und angewendet
+    void ApplyBuoyancy()
+    {
+        // Die wellenhöhe wird abgefragt
         float waveHeight = WaveManager.instance.GetWaveHeight(transform.position.x);
         if (transform.position.y < waveHeight)
         {
@@ -36,3 +59,4 @@ public class Floater : MonoBehaviour
         }
     }
 }
+
