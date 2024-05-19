@@ -10,6 +10,7 @@ public class Floater : MonoBehaviour
     public int floaterCount = 1;
     public float waterDrag = 0.99f;
     public float waterAngularDrag = 0.5f;
+    public MeshFilter meshfilter;
 
     private Vector3 gravityForce;
 
@@ -49,7 +50,7 @@ public class Floater : MonoBehaviour
     void ApplyBuoyancy()
     {
         // Die wellenhöhe wird abgefragt
-        float waveHeight = WaveManager.instance.GetWaveHeight(transform.position.x);
+        float waveHeight = WaveManager.instance.GetWaveHeight(transform.position.x) + meshfilter.transform.position.y;
         if (transform.position.y < waveHeight)
         {
             float displacementMultiplier = Mathf.Clamp01((waveHeight - transform.position.y) / depthBeforeSubmerged) * displacementAmount;
