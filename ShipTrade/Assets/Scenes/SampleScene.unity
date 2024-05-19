@@ -787,8 +787,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 330585543}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.10592587, y: 0.86484665, z: -0.20559071, w: 0.44559225}
-  m_LocalPosition: {x: -323.3328, y: 208.08, z: 262.25824}
+  m_LocalRotation: {x: 0.10592587, y: 0.86484665, z: -0.20559074, w: 0.4455922}
+  m_LocalPosition: {x: -323.3328, y: 198.68001, z: 262.25824}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1263,7 +1263,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 517196082}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.10592586, y: 0.86484665, z: -0.20559071, w: 0.44559228}
+  m_LocalRotation: {x: 0.10592586, y: 0.86484665, z: -0.20559072, w: 0.44559222}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -1284,7 +1284,7 @@ GameObject:
   m_Layer: 0
   m_Name: Floater
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: -5487077368411116049, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -1455,7 +1455,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 4ed4c60c33b49d8479d27e4d43b34405,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -15
+      value: -24.4
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 4ed4c60c33b49d8479d27e4d43b34405,
         type: 3}
@@ -2204,7 +2204,7 @@ Transform:
   m_GameObject: {fileID: 1172074834}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -323.3328, y: 208.08, z: 262.25824}
+  m_LocalPosition: {x: -323.3328, y: 198.68001, z: 262.25824}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -2308,7 +2308,7 @@ GameObject:
   - component: {fileID: 1502308581}
   m_Layer: 0
   m_Name: Water
-  m_TagString: Untagged
+  m_TagString: water
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2396,7 +2396,7 @@ Transform:
   m_GameObject: {fileID: 1502308574}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 21.6015, y: 19, z: 35.3837}
+  m_LocalPosition: {x: 21.6015, y: 5, z: 35.3837}
   m_LocalScale: {x: 34.225636, y: 1, z: 40.769455}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2414,7 +2414,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac3430f13d2573c4688ccaa23de7e720, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  amplitude: 1
+  amplitude: 5
   lenght: 2
   speed: 1
   offset: 0
