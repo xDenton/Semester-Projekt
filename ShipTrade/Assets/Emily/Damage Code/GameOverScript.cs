@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class LogicScript : MonoBehaviour
+public class GameOverScript : MonoBehaviour
 {
     public GameObject gameOverScreen;
 

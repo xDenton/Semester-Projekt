@@ -2,15 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Player : MonoBehaviour
+public class Ship : MonoBehaviour
 {
-    [SerializeField] private float _maxHealth = 3;
+    [SerializeField] private float _maxHealth = 5;
     private float _currentHealth;
 
     [SerializeField] private Healthbar _healthbar;
 
-    public bool playerIsAlive = true;
-    public LogicScript logic;
+    public bool shipIsAlive = true;
+    public GameOverScript gameOver;
 
     void Start()
     {
@@ -21,12 +21,12 @@ public class Player : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        _currentHealth -= Random.Range(0.5f, 1.5f);
+        _currentHealth -= 1;
 
         if (_currentHealth <= 0)
         {
-            logic.GameOver();
-            playerIsAlive = false;
+            gameOver.GameOver();
+            shipIsAlive = false;
         }
         else
         {
