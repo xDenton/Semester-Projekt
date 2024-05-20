@@ -21,7 +21,7 @@ public class SceneSwitcher : MonoBehaviour
     {
         if (isPlayerInTrigger && Input.GetKeyDown(KeyCode.E))
         {
-            Debug.Log("Space wurde gedrückt");
+            Debug.Log("E wurde gedrückt");
             SceneManager.LoadScene(1);
         }
     }
@@ -30,7 +30,7 @@ public class SceneSwitcher : MonoBehaviour
         if (other.tag == "hafen")
         {
             panel.SetActive(true);
-            //Debug.Log("test");
+            Debug.Log("test");
             isPlayerInTrigger = true;
         }
     }
