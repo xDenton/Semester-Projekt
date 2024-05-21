@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Ship
   - water
+  - hafen
   layers:
   - Default
   - TransparentFX

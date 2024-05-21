@@ -9,8 +9,8 @@ public class ThirdPersonController : MonoBehaviour
     public Rigidbody rigidBody;
     private Quaternion initialRotation;
 
-    public float maxspeed = 5f;
-    public float speed = 0f;
+    public float maxspeed = 300f;
+    public float speed = 5f;
     public float acceleration = 2f;
     public float deceleration = 1f;
     public float coastDeceleration = 0.5f;
