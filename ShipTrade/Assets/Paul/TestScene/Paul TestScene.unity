@@ -222,12 +222,17 @@ PrefabInstance:
     - target: {fileID: 3116946358384672739, guid: b4fbe621ebb612a408e4bc56a6c56bec,
         type: 3}
       propertyPath: maxspeed
-      value: 500
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 3116946358384672739, guid: b4fbe621ebb612a408e4bc56a6c56bec,
+        type: 3}
+      propertyPath: turnspeed
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 3116946358384672739, guid: b4fbe621ebb612a408e4bc56a6c56bec,
         type: 3}
       propertyPath: returnSpeed
-      value: 1
+      value: 0.8
       objectReference: {fileID: 0}
     - target: {fileID: 3116946358384672739, guid: b4fbe621ebb612a408e4bc56a6c56bec,
         type: 3}
@@ -238,6 +243,11 @@ PrefabInstance:
         type: 3}
       propertyPath: deceleration
       value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 3116946358384672739, guid: b4fbe621ebb612a408e4bc56a6c56bec,
+        type: 3}
+      propertyPath: rowingInterval
+      value: 5.04
       objectReference: {fileID: 0}
     - target: {fileID: 3234835357529775411, guid: b4fbe621ebb612a408e4bc56a6c56bec,
         type: 3}
@@ -351,8 +361,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 278739863}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.3640502, y: 0.0029083842, z: -0.0011368126, w: 0.93137413}
-  m_LocalPosition: {x: -72.73996, y: 1064.8823, z: -1136.4446}
+  m_LocalRotation: {x: 0.34183064, y: 0.0033636, z: -0.001223491, w: 0.9397548}
+  m_LocalPosition: {x: -72.73996, y: 850.59607, z: -993.5227}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -500,8 +510,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 810103532}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.3640502, y: 0.0029083842, z: -0.0011368126, w: 0.93137413}
-  m_LocalPosition: {x: -72.73996, y: 1064.8823, z: -1136.4446}
+  m_LocalRotation: {x: 0.34183064, y: 0.0033636, z: -0.001223491, w: 0.9397548}
+  m_LocalPosition: {x: -72.73996, y: 850.59607, z: -993.5227}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -520,6 +530,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Water
+      objectReference: {fileID: 0}
+    - target: {fileID: 4079611656424257932, guid: ba88caee33fb51c4fa52e2686878dd1f,
+        type: 3}
+      propertyPath: m_TagString
+      value: water
       objectReference: {fileID: 0}
     - target: {fileID: 5793199246612472158, guid: ba88caee33fb51c4fa52e2686878dd1f,
         type: 3}
@@ -635,7 +650,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_BindingMode: 0
-  m_FollowOffset: {x: -6.99765, y: 1033.8823, z: -1120.4446}
+  m_FollowOffset: {x: -6.99765, y: 819.59607, z: -977.5227}
   m_XDamping: 1
   m_YDamping: 1
   m_ZDamping: 0.9
@@ -785,6 +800,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Water (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4079611656424257932, guid: ba88caee33fb51c4fa52e2686878dd1f,
+        type: 3}
+      propertyPath: m_TagString
+      value: water
       objectReference: {fileID: 0}
     - target: {fileID: 5793199246612472158, guid: ba88caee33fb51c4fa52e2686878dd1f,
         type: 3}
