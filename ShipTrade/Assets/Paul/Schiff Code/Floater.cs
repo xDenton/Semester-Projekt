@@ -11,6 +11,8 @@ public class Floater : MonoBehaviour
     public float waterDrag = 0.99f;
     public float waterAngularDrag = 0.5f;
     public MeshFilter meshfilter;
+    public float rollAmplitude = 5f;  // Amplitude der Rollbewegung
+    public float rollFrequency = 1f;  // Frequenz der Rollbewegung
 
     private Vector3 gravityForce;
 
@@ -35,8 +37,10 @@ public class Floater : MonoBehaviour
     }
     private void FixedUpdate()
     {
+        Debug.Log("test");
         ApplyGravity();
         ApplyBuoyancy();
+        ApplyRolling();
 
         rigidBody.AddForceAtPosition(Physics.gravity / floaterCount, transform.position, ForceMode.Acceleration);
 
@@ -59,5 +63,13 @@ public class Floater : MonoBehaviour
             rigidBody.AddTorque(displacementMultiplier * -rigidBody.angularVelocity * waterAngularDrag * Time.fixedDeltaTime, ForceMode.VelocityChange);
         }
     }
+    void ApplyRolling()
+    {
+        float rollAngle = Mathf.Sin(Time.time * rollFrequency) * rollAmplitude;
+        Quaternion rollRotation = Quaternion.Euler(0, 0, rollAngle);
+        rigidBody.MoveRotation(rigidBody.rotation * rollRotation);
+
+    }
+
 }
 
