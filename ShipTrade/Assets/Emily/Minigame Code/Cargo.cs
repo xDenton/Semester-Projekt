@@ -4,6 +4,6 @@ using UnityEngine;
 
 public class Cargo : MonoBehaviour
 {
-    public int cargoWeight = 200;
-    public int cargoValue = 150;
+    public int cargoWeight;
+    public int cargoValue;
 }
