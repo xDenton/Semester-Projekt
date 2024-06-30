@@ -134,14 +134,6 @@ public class ThirdPersonController : MonoBehaviour
     {
         freezeFrames = frames;
         isInputFrozen = true;
-
     }
-
-        /*void ApplyRowingForce()
-        {
-            if (rigidBody.velocity.magnitude < maxspeed)
-            {
-                rigidBody.AddForce(transform.forward * rowingForce, ForceMode.Impulse);
-            }
-        }*/
+        
 }

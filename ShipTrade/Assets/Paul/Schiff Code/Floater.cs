@@ -37,7 +37,7 @@ public class Floater : MonoBehaviour
     }
     private void FixedUpdate()
     {
-        Debug.Log("test");
+        //Debug.Log("test");
         ApplyGravity();
         ApplyBuoyancy();
         ApplyRolling();
