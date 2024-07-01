@@ -58,7 +58,7 @@ public class ThirdPersonController : MonoBehaviour
         }
         else
         {
-            speed -= coastDeceleration * Time.deltaTime;
+            speed -= coastDeceleration * Time.deltaTime * 10;
         }
         //Begrenzung der Geschwindigkeit
         speed = Mathf.Clamp(speed, 0f, maxspeed);
