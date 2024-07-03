@@ -21,8 +21,8 @@ public class SceneSwitcher : MonoBehaviour
     {
         if (isPlayerInTrigger && Input.GetKeyDown(KeyCode.E))
         {
-            Debug.Log("E wurde gedrückt");
-            SceneManager.LoadScene(2);
+            //Debug.Log("E wurde gedrückt");
+            SceneManager.LoadScene(1);
         }
     }
     private void OnTriggerEnter(Collider other)
@@ -32,6 +32,10 @@ public class SceneSwitcher : MonoBehaviour
             panel.SetActive(true);
             Debug.Log("test");
             isPlayerInTrigger = true;
+        }
+        if(isPlayerInTrigger && Input.GetKeyDown(KeyCode.E))
+        {
+
         }
     }
     private void OnTriggerExit(Collider other)

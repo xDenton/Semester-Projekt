@@ -431,18 +431,18 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 518638849}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: -0, y: 0.017421931, z: -0, w: 0.99984825}
   m_LocalPosition: {x: 0, y: 0, z: -1017}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 241490691}
   m_Father: {fileID: 12376564}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 1.997, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -354, y: 12}
-  m_SizeDelta: {x: 383.7035, y: 100.2794}
+  m_AnchoredPosition: {x: -365.5, y: 12}
+  m_SizeDelta: {x: 321.2468, y: 100.2794}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &518638851
 MonoBehaviour:
@@ -934,7 +934,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Texture: {fileID: 2800000, guid: 3cd7367051b908a4892df06c0749720e, type: 3}
+  m_Texture: {fileID: 2800000, guid: b51fbaa38391ab1489670fe1d01d8c5b, type: 3}
   m_UVRect:
     serializedVersion: 2
     x: 0

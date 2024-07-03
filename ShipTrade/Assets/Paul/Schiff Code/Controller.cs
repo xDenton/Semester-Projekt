@@ -125,7 +125,7 @@ public class ThirdPersonController : MonoBehaviour
             {
                 //StartCoroutine
                 // W-Taste für 2 Frames einfrieren, wenn die maximale Geschwindigkeit erreicht ist
-                FreezeInputForFrames(400);
+                FreezeInputForFrames(800);
                 
             }
         }

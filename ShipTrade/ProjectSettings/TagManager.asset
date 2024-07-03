@@ -8,6 +8,7 @@ TagManager:
   - water
   - hafen
   - hindernis
+  - Ziel
   layers:
   - Default
   - TransparentFX

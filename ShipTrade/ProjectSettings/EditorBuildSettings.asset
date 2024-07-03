@@ -9,16 +9,22 @@ EditorBuildSettings:
     path: "Assets/Scenes/Men\xFCs/Start Menu.unity"
     guid: b4ea8bc84b992c847b218f5df70ca4dc
   - enabled: 0
-    path: Assets/Scenes/Route/Level 1.unity
+    path: Assets/Scenes/Route/Prototyp/Level 1.unity
     guid: 99c9720ab356a0642a771bea13969a05
   - enabled: 1
     path: Assets/Scenes/Minigame/Beladen.unity
     guid: f22026e6d2c98684398052648e17dcdc
   - enabled: 1
-    path: Assets/Scenes/Route/Route 1.unity
+    path: Assets/Scenes/Route/Route 1/Route 1.unity
     guid: 8645d1a35c00ad54780a1f5d27007aa5
   - enabled: 1
     path: "Assets/Scenes/Men\xFCs/Level Auswahl Bildschirm.unity"
     guid: 461f737529e3f544a8c50249de08f954
+  - enabled: 1
+    path: "Assets/Scenes/Men\xFCs/WellDone.unity"
+    guid: fbc62013e02b79e44ba562045c005cab
+  - enabled: 1
+    path: Assets/Scenes/Route/Route 1/Route 2.unity
+    guid: d6dd547805664bd4f8cc0101e0b46a7a
   m_configObjects: {}
   m_UseUCBPForAssetBundles: 0

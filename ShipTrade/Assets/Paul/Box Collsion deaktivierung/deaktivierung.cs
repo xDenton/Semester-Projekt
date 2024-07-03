@@ -36,7 +36,7 @@ public class deaktivierung : MonoBehaviour
         {
             Debug.Log("getroffen");
             boxcollider.enabled = false;
-            freezeFrames = 200;
+            freezeFrames = 300;
         }
         /*
         if (freezeFrames > 0)
