@@ -23,13 +23,7 @@ public class ThirdPersonController : MonoBehaviour
 
     //Zeitverwaltung
     public int freezeFrames = 0;  // Zähler für die Anzahl der Frames, die die Eingabe eingefroren werden soll
-    public bool isInputFrozen = false;  // Zustand, ob die Eingabe eingefroren ist
-
-
-    //Rudermechanik
-    public float rowingForce = 10f; // Die Kraft, die bei jedem Ruderschlag angewendet wird
-    public float rowingInterval = 1.5f; // Zeit zwischen Ruderschlägen in Sekunden
-    //private float nextRowTime = 0f;
+    public bool isInputFrozen = false;  // Zustand, ob die Eingabe eingefroren
 
 
     // Start is called before the first frame update
@@ -62,16 +56,6 @@ public class ThirdPersonController : MonoBehaviour
         }
         //Begrenzung der Geschwindigkeit
         speed = Mathf.Clamp(speed, 0f, maxspeed);
-        //Rudern einführen
-        /* if (vertical > 0f && Time.time >= nextRowTime)
-        {
-            ApplyRowingForce();
-            nextRowTime = Time.time + rowingInterval;
-        }
-        else
-        {
-            speed -= coastDeceleration * Time.deltaTime;
-        }*/
 
 
         if (speed > 0f)
@@ -93,13 +77,14 @@ public class ThirdPersonController : MonoBehaviour
                 // Anwendung der Rotation auf das Schiff
                 transform.rotation *= targetRotation;
             }
-            else
+            /*else
             {
                 // Wenn keine Eingabe erfolgt, das Schiff langsam zur Ausgangsrotation zurückdrehen
                 transform.rotation = Quaternion.Lerp(transform.rotation, initialRotation, returnSpeed * Time.deltaTime);
-            }
+            }*/
 
-            Vector3 moveDir = Quaternion.Euler(0f, targetAngle, 0f) * Vector3.forward;
+            Vector3 moveDir = transform.forward;
+            moveDir.y = 0; // Halte die Y-Position statisch
             //Debug.Log(moveDir.normalized.ToString());
             controller.Move(moveDir.normalized * speed * Time.deltaTime);
 
@@ -120,6 +105,7 @@ public class ThirdPersonController : MonoBehaviour
             {
                 // Aktion bei Druck der W-Taste, z.B. Beschleunigen
                 rigidBody.AddForce(transform.forward * 10f);  // Beispielhafte Kraftanwendung
+
             }
             else
             {
