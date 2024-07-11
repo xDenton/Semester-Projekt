@@ -5,7 +5,7 @@ using UnityEngine;
 public class IndicateWeight : MonoBehaviour
 {
     private float movementSpeed = 50f;
-    private float vecX = -715.5f;
+    public float vecX = -715.5f;
     public CalculateCargoWeight CalculateCargoWeight;
     public RectTransform RectTransform;
 
