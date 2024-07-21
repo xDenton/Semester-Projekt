@@ -24,7 +24,13 @@ EditorBuildSettings:
     path: "Assets/Scenes/Men\xFCs/WellDone.unity"
     guid: fbc62013e02b79e44ba562045c005cab
   - enabled: 1
-    path: Assets/Scenes/Route/Route 1/Route 2.unity
-    guid: d6dd547805664bd4f8cc0101e0b46a7a
+    path: Assets/Scenes/Route/Route 2/Route 2.unity
+    guid: f303749f65aa0b64e8fa8df75432dbc6
+  - enabled: 1
+    path: Assets/Scenes/Route/Route 1/Route 1.1.unity
+    guid: 3351a292c82ad1540bd13ee36a596cce
+  - enabled: 1
+    path: Assets/Scenes/Route/Route 2/Route 2.2.unity
+    guid: 53db480aef9c773489764b3cb527e780
   m_configObjects: {}
   m_UseUCBPForAssetBundles: 0

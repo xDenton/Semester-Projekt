@@ -7,7 +7,8 @@ public class SceneSwitcher : MonoBehaviour
 {
     public GameObject panel;
     private bool isPlayerInTrigger = false;
-
+    public int sceneid;
+    public int mirrorScene;
 
     // Start is called before the first frame update
     void Start()
@@ -22,7 +23,8 @@ public class SceneSwitcher : MonoBehaviour
         if (isPlayerInTrigger && Input.GetKeyDown(KeyCode.E))
         {
             //Debug.Log("E wurde gedrückt");
-            SceneManager.LoadScene(1);
+            GameManager.Instance.setCurrentScene(mirrorScene);
+            SceneManager.LoadScene(sceneid);
         }
     }
     private void OnTriggerEnter(Collider other)

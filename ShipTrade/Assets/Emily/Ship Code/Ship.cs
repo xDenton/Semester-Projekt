@@ -20,14 +20,15 @@ public class Ship : MonoBehaviour
     public GameObject LeeresHerz5;
 
 
-
     void Start()
     {
-        _currentHealth = _maxHealth;
-        if(_healthbar != null)
+        _currentHealth = GameManager.Instance.playerHealth; // nimmt nun die Anzahl des Lebens vom GameManager
+        
+        if (_healthbar != null)
         {
             _healthbar.UpdateHealthbar(_maxHealth, _currentHealth);
         }
+        UpdateHearts(); // Herzen am Anfang wird überprüft wie viel Leben am Anfang vorhanden ist
     }
 
     private void OnCollisionEnter(Collision collision)
@@ -36,35 +37,41 @@ public class Ship : MonoBehaviour
         if (collision.gameObject.tag == "hindernis")
         {
             Debug.Log("getroffen");
+            GameManager.Instance.TakeDamage(1);
             _currentHealth -= 1;
-        }
-        // Herzen werden weggemacht
-        if (_currentHealth == 4)
-        {
-            LeeresHerz1.SetActive(true);
-        }
-        if (_currentHealth < 4)
-        {
-            LeeresHerz2.SetActive(true);
-        }
-        if (_currentHealth < 3)
-        {
-            LeeresHerz3.SetActive(true);
-        }
-        if (_currentHealth < 2)
-        {
-            LeeresHerz4.SetActive(true);
-        }
-
-        if (_currentHealth <= 0)
-        {
-            LeeresHerz5.SetActive(true);
-            gameOver.GameOver();
-            shipIsAlive = false;
-        }
-        else
-        {
-            _healthbar.UpdateHealthbar(_maxHealth, _currentHealth);
+            UpdateHearts(); //Herzen werden anhand der Fuktion aktualisiert 
         }
     }
+        public void UpdateHearts()
+        {
+            // Herzen werden weggemacht
+            if (_currentHealth < 5)
+            {
+                LeeresHerz1.SetActive(true);
+            }
+            if (_currentHealth < 4)
+            {
+                LeeresHerz2.SetActive(true);
+            }
+            if (_currentHealth < 3)
+            {
+                LeeresHerz3.SetActive(true);
+            }
+            if (_currentHealth < 2)
+            {
+                LeeresHerz4.SetActive(true);
+            }
+            if (_currentHealth <= 0)
+            {
+                LeeresHerz5.SetActive(true);
+                gameOver.GameOver();
+                //GameManager.Instance.TakeDamage(1); // Wird auf den GameManager zugegriffen
+                shipIsAlive = false;
+                GameManager.Instance.ResetHealth();
+            }
+            else
+            {
+                _healthbar.UpdateHealthbar(_maxHealth, _currentHealth);
+            }
+        }
 }

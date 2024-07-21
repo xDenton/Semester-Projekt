@@ -12,7 +12,7 @@ public class Routenswitcher : MonoBehaviour
     }
     public void Levelswitcher()
     {
-        SceneManager.LoadScene("Route 2");
+        SceneManager.LoadScene(GameManager.Instance.currentScene);
     }
 
 }
