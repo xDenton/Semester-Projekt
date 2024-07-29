@@ -5,6 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class RestartButton : MonoBehaviour
 {
+
+    public int Aktuellescene;
     // Start is called before the first frame update
     void Start()
     {
@@ -18,6 +20,6 @@ public class RestartButton : MonoBehaviour
     }
     public void Restart()
     {
-        SceneManager.LoadScene("Route 1");
+        SceneManager.LoadScene(Aktuellescene);
     }
 }

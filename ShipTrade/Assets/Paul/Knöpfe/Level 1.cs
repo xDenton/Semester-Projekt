@@ -18,8 +18,16 @@ public class Level : MonoBehaviour
     {
         
     }
+    public void back()
+    {
+        SceneManager.LoadScene(0);
+    }
     public void Route1()
     {
         SceneManager.LoadScene("Route 1");
+    }
+    public void Route2()
+    {
+        SceneManager.LoadScene("Route 2");
     }
 }
