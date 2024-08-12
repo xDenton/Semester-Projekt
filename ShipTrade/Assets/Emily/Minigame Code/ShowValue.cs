@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class ShowValue : MonoBehaviour
 {
-    public int value;
+    public int value = 0;
     public Text ValueText;
 
     public void UpdateShowValue(int totalValue)

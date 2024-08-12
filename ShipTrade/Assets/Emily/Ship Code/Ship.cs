@@ -19,6 +19,9 @@ public class Ship : MonoBehaviour
     public GameObject LeeresHerz4;
     public GameObject LeeresHerz5;
 
+    public int cargoAmount = 0;
+    public int totalWeight = 0;
+    public static int totalValue = 0;
 
     void Start()
     {
@@ -74,4 +77,25 @@ public class Ship : MonoBehaviour
                 _healthbar.UpdateHealthbar(_maxHealth, _currentHealth);
             }
         }
+
+    public void TrackCargoAmount(int count)
+    {
+        cargoAmount += count;
+    }
+    public void AddCargoWeight(int cargoWeight)
+    {
+        totalWeight += cargoWeight;
+    }
+    public void RemoveCargoWeight(int cargoWeight)
+    {
+        totalWeight -= cargoWeight;
+    }
+    public void AddCargoValue(int cargoValue)
+    {
+        totalValue += cargoValue;
+    }
+    public void RemoveCargoValue(int cargoValue)
+    {
+        totalValue -= cargoValue;
+    }
 }
