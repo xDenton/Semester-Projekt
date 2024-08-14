@@ -32,5 +32,11 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Route/Route 2/Route 2.2.unity
     guid: 53db480aef9c773489764b3cb527e780
+  - enabled: 1
+    path: Assets/Scenes/Route/Route 3/Route 3.1.unity
+    guid: fe9b59ec5b38f674c9b428597f349273
+  - enabled: 1
+    path: Assets/Scenes/Route/Route 3/Route 3.2.unity
+    guid: f52f35bda59ca5f4a9ff83e8f5a44853
   m_configObjects: {}
   m_UseUCBPForAssetBundles: 0

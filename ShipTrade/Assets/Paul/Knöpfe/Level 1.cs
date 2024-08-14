@@ -30,4 +30,8 @@ public class Level : MonoBehaviour
     {
         SceneManager.LoadScene("Route 2");
     }
+    public void Route3()
+    {
+        SceneManager.LoadScene("Route 3.1");
+    }
 }
