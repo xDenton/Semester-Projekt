@@ -6,26 +6,56 @@ public class CargoZoneShip : MonoBehaviour
 {
     public IndicateWeight IndicateWeight;
     public Ship myShip;
-    public Cargo myCargo;
+    public Cargo myBigChest;
+    public Cargo myMiddleChest;
+    public Cargo mySmallChest;
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.CompareTag("CargoName"))
+        if (other.gameObject.CompareTag("BigChest"))
         {
-            myShip.AddCargoWeight(myCargo.cargoWeight);
-            IndicateWeight.AddIndicateWeight(myCargo.cargoWeight);
-            myShip.AddCargoValue(myCargo.cargoValue);
+            myShip.AddCargoWeight(myBigChest.cargoWeight);
+            IndicateWeight.AddIndicateWeight(myBigChest.cargoWeight);
+            myShip.AddCargoValue(myBigChest.cargoValue);
+            myShip.TrackCargoAmount(1);
+        }
+        if (other.gameObject.CompareTag("MiddleChest"))
+        {
+            myShip.AddCargoWeight(myMiddleChest.cargoWeight);
+            IndicateWeight.AddIndicateWeight(myMiddleChest.cargoWeight);
+            myShip.AddCargoValue(myMiddleChest.cargoValue);
+            myShip.TrackCargoAmount(1);
+        }
+        if (other.gameObject.CompareTag("SmallChest"))
+        {
+            myShip.AddCargoWeight(mySmallChest.cargoWeight);
+            IndicateWeight.AddIndicateWeight(mySmallChest.cargoWeight);
+            myShip.AddCargoValue(mySmallChest.cargoValue);
             myShip.TrackCargoAmount(1);
         }
     }
 
     private void OnTriggerExit(Collider other)
     {
-        if (other.gameObject.CompareTag("CargoName"))
+        if (other.gameObject.CompareTag("BigChest"))
         {
-            myShip.RemoveCargoWeight(myCargo.cargoWeight);
-            IndicateWeight.RemoveIndicateWeight(myCargo.cargoWeight);
-            myShip.RemoveCargoValue(myCargo.cargoValue);
+            myShip.RemoveCargoWeight(myBigChest.cargoWeight);
+            IndicateWeight.RemoveIndicateWeight(myBigChest.cargoWeight);
+            myShip.RemoveCargoValue(myBigChest.cargoValue);
+            myShip.TrackCargoAmount(-1);
+        }
+        if (other.gameObject.CompareTag("MiddleChest"))
+        {
+            myShip.RemoveCargoWeight(myMiddleChest.cargoWeight);
+            IndicateWeight.RemoveIndicateWeight(myMiddleChest.cargoWeight);
+            myShip.RemoveCargoValue(myMiddleChest.cargoValue);
+            myShip.TrackCargoAmount(-1);
+        }
+        if (other.gameObject.CompareTag("SmallChest"))
+        {
+            myShip.RemoveCargoWeight(mySmallChest.cargoWeight);
+            IndicateWeight.RemoveIndicateWeight(mySmallChest.cargoWeight);
+            myShip.RemoveCargoValue(mySmallChest.cargoValue);
             myShip.TrackCargoAmount(-1);
         }
     }

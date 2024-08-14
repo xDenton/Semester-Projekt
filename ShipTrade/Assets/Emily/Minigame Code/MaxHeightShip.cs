@@ -17,17 +17,28 @@ public class MaxHeightShip : MonoBehaviour
     //}
 
     public GameObject heightWarning;
+    private int trackObjectsInHeightWarning = 0;
 
     public void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.tag == "CargoName")
+        if (other.gameObject.layer == 6)
+        {
             StartHeightWarning();
+            trackObjectsInHeightWarning++;
+        }
     }
     
     public void OnTriggerExit(Collider other)
     {
-        if (other.gameObject.tag == "CargoName")
-            StopHeightWarning();
+        if (other.gameObject.layer == 6)
+        {
+            trackObjectsInHeightWarning--;
+
+            if (trackObjectsInHeightWarning == 0)
+            {
+                StopHeightWarning();
+            }
+        }
     }
     
     public void StartHeightWarning()

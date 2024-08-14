@@ -11,6 +11,9 @@ TagManager:
   - Ziel
   - CargoName
   - MaxHeight
+  - BigChest
+  - MiddleChest
+  - SmallChest
   layers:
   - Default
   - TransparentFX
