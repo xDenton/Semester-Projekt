@@ -5,6 +5,8 @@ using UnityEngine;
 public class Draggable : MonoBehaviour
 {
     Vector3 mousePosition;
+    private bool isFront = true;
+    private bool isBack = false;
 
     private Vector3 GetMouseWorldPosition()
     {
@@ -12,6 +14,26 @@ public class Draggable : MonoBehaviour
     }
     private void OnMouseDown()
     {
+        if (Input.GetKey(KeyCode.W))
+        {
+            Debug.Log("W Pressed");
+            if (isFront)
+            {
+                transform.position += new Vector3(0, 0, 75);
+                isBack = true;
+                isFront = false;
+            }
+        }
+        if (Input.GetKey(KeyCode.S))
+        {
+            Debug.Log("S Pressed");
+            if (isBack)
+            {
+                transform.position -= new Vector3(0, 0, 75);
+                isFront = true;
+                isBack = false;
+            }
+        }
         mousePosition = Input.mousePosition - GetMouseWorldPosition();
     }
 

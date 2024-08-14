@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Cargo : MonoBehaviour
 {
+    public string cargoName;
     public int cargoWeight;
     public int cargoValue;
 }
