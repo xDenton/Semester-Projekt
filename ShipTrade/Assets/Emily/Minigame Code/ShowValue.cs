@@ -8,9 +8,9 @@ public class ShowValue : MonoBehaviour
     public int value = 0;
     public Text ValueText;
 
-    public void UpdateShowValue(int totalValue)
+    void Start()
     {
-        value = totalValue;
+        value = Ship.totalValue;
         ValueText.text = value.ToString();
     }
 }

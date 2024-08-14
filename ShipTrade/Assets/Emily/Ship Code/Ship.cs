@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Rendering;
 
 public class Ship : MonoBehaviour
 {
@@ -21,7 +22,9 @@ public class Ship : MonoBehaviour
 
     public int cargoAmount = 0;
     public int totalWeight = 0;
+    public int currentValue = 0;
     public static int totalValue = 0;
+    public IndicateValue indicateValue;
 
     void Start()
     {
@@ -92,10 +95,14 @@ public class Ship : MonoBehaviour
     }
     public void AddCargoValue(int cargoValue)
     {
+        currentValue += cargoValue;
+        indicateValue.UpdateCurrentValue(currentValue);
         totalValue += cargoValue;
     }
     public void RemoveCargoValue(int cargoValue)
     {
+        currentValue -= cargoValue;
+        indicateValue.UpdateCurrentValue(currentValue);
         totalValue -= cargoValue;
     }
 }

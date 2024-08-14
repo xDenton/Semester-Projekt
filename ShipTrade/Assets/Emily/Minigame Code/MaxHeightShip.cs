@@ -17,6 +17,7 @@ public class MaxHeightShip : MonoBehaviour
     //}
 
     public GameObject heightWarning;
+    public GameObject buttonDriveBack;
     private int trackObjectsInHeightWarning = 0;
 
     public void OnTriggerEnter(Collider other)
@@ -45,7 +46,8 @@ public class MaxHeightShip : MonoBehaviour
     {
         //meshRendererCargo.material = meshRendererCargo.material.name.StartsWith(heightMaterial.name) ? originalMaterial : heightMaterial;
 
-        heightWarning.SetActive(true);
+        heightWarning?.SetActive(true);
+        buttonDriveBack?.SetActive(false);
     }
     
     public void StopHeightWarning()
@@ -53,5 +55,6 @@ public class MaxHeightShip : MonoBehaviour
         //meshRendererCargo.material = meshRendererCargo.material.name.StartsWith(originalMaterial.name) ? heightMaterial : originalMaterial;
 
         heightWarning?.SetActive(false);
+        buttonDriveBack?.SetActive(true);
     }
 }
