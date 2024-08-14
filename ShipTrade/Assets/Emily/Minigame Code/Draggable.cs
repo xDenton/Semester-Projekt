@@ -19,7 +19,7 @@ public class Draggable : MonoBehaviour
             Debug.Log("W Pressed");
             if (isFront)
             {
-                transform.position += new Vector3(0, 0, 75);
+                transform.position += new Vector3(0, 0, 80);
                 isBack = true;
                 isFront = false;
             }
