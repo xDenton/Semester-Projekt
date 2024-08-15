@@ -44,5 +44,11 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Route/Route 3/Route 3.2.unity
     guid: f52f35bda59ca5f4a9ff83e8f5a44853
+  - enabled: 1
+    path: Assets/Scenes/Minigame/Beladen2.unity
+    guid: 60c860064e1e15f40b8e0a82fddb6400
+  - enabled: 1
+    path: Assets/Scenes/Minigame/Beladen3.unity
+    guid: ba6c7c07eec897a40953d17569eda456
   m_configObjects: {}
   m_UseUCBPForAssetBundles: 0

@@ -22,5 +22,7 @@ public class RestartButton : MonoBehaviour
     {
         SceneManager.LoadScene(Aktuellescene);
         GameManager.Instance.ResetHealth();
+        GameMenü gm = GetComponent<GameMenü>();
+        gm.Setunfrozen();
     }
 }
