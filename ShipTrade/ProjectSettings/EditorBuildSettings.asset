@@ -12,7 +12,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Videos/Intro.unity
     guid: 0a41234cca89f8c448e11bdf678a0e60
   - enabled: 1
-    path: "Assets/Scenes/Men\xFCs/Start Menu.unity"
+    path: "Assets/Scenes/Men\xFCs/StartMenu.unity"
     guid: b4ea8bc84b992c847b218f5df70ca4dc
   - enabled: 0
     path: Assets/Scenes/Route/Prototyp/Level 1.unity

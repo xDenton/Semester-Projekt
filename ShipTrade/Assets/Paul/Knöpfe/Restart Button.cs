@@ -21,5 +21,6 @@ public class RestartButton : MonoBehaviour
     public void Restart()
     {
         SceneManager.LoadScene(Aktuellescene);
+        GameManager.Instance.ResetHealth();
     }
 }

@@ -47,6 +47,13 @@ public class Ship : MonoBehaviour
             _currentHealth -= 1;
             UpdateHearts(); //Herzen werden anhand der Fuktion aktualisiert 
         }
+         if (collision.gameObject.tag == "Land")
+        {
+            Debug.Log("getroffen");
+            GameManager.Instance.TakeDamage(1);
+            _currentHealth = 0;
+            UpdateHearts(); //Herzen werden anhand der Fuktion aktualisiert 
+        }
     }
         public void UpdateHearts()
         {

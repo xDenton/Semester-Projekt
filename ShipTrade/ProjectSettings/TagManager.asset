@@ -14,6 +14,7 @@ TagManager:
   - BigChest
   - MiddleChest
   - SmallChest
+  - Land
   layers:
   - Default
   - TransparentFX

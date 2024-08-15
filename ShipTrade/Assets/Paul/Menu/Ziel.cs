@@ -22,7 +22,7 @@ public class ziel : MonoBehaviour
         if (isPlayerInTrigger && Input.GetKeyDown(KeyCode.E))
         {
             //Debug.Log("E wurde gedrückt");
-            SceneManager.LoadScene(4);
+            SceneManager.LoadScene("WellDone");
         }
     }
     private void OnTriggerEnter(Collider other)

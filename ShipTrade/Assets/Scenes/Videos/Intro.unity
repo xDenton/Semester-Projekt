@@ -641,8 +641,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   videoPlayer: {fileID: 1734393887}
   fadeImage: {fileID: 1229494489}
-  Scenenummer: 0
-  fadeDuration: 2
+  Scenename: StartMenu
+  fadeDuration: 0
 --- !u!1 &2069396895
 GameObject:
   m_ObjectHideFlags: 0

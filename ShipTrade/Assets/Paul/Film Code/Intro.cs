@@ -9,7 +9,7 @@ public class Intro : MonoBehaviour
 {
     public VideoPlayer videoPlayer;
     public Image fadeImage; // Das schwarze UI-Image
-    public int Scenenummer;
+    public string Scenename;
     public float fadeDuration = 2.0f; // Dauer des Fade-Effekts
 
     private bool isFading = false;
@@ -50,6 +50,6 @@ public class Intro : MonoBehaviour
         }
 
         // Szene laden
-        SceneManager.LoadScene(Scenenummer);
+        SceneManager.LoadScene(Scenename);
     }
 }
