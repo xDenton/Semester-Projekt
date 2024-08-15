@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MaxHeightShip : MonoBehaviour
+public class Warnings : MonoBehaviour
 {
     //[SerializeField] GameObject cargo;
     //[SerializeField] Material heightMaterial;
@@ -17,7 +17,11 @@ public class MaxHeightShip : MonoBehaviour
     //}
 
     public GameObject heightWarning;
+    public GameObject tooLightWarning;
+    public GameObject tooHeavyWarning;
     public GameObject buttonDriveBack;
+    private bool driveBackPossibleWeight = false;
+    private bool driveBackPossibleHeight = true;
     private int trackObjectsInHeightWarning = 0;
 
     public void OnTriggerEnter(Collider other)
@@ -41,13 +45,54 @@ public class MaxHeightShip : MonoBehaviour
             }
         }
     }
+
+    private void CheckIfDriveBackPossible()
+    {
+        if (driveBackPossibleHeight && driveBackPossibleWeight)
+        {
+            buttonDriveBack.SetActive(true);
+        }
+        else
+        {
+            buttonDriveBack.SetActive(false);
+        }
+    }
+
+    public void StartTooLightWarning()
+    {
+        tooLightWarning?.SetActive(true);
+        driveBackPossibleWeight = false;
+        CheckIfDriveBackPossible();
+    }
     
+    public void StopTooLightWarning()
+    {
+        tooLightWarning?.SetActive(false);
+        driveBackPossibleWeight = true;
+        CheckIfDriveBackPossible();
+    }
+
+    public void StartTooHeavyWarning()
+    {
+        tooHeavyWarning?.SetActive(true);
+        driveBackPossibleWeight = false;
+        CheckIfDriveBackPossible();
+    }
+
+    public void StopTooHeavyWarning()
+    {
+        tooHeavyWarning?.SetActive(false);
+        driveBackPossibleWeight = true;
+        CheckIfDriveBackPossible();
+    }
+
     public void StartHeightWarning()
     {
         //meshRendererCargo.material = meshRendererCargo.material.name.StartsWith(heightMaterial.name) ? originalMaterial : heightMaterial;
 
         heightWarning?.SetActive(true);
-        buttonDriveBack?.SetActive(false);
+        driveBackPossibleHeight = false;
+        CheckIfDriveBackPossible();
     }
     
     public void StopHeightWarning()
@@ -55,6 +100,7 @@ public class MaxHeightShip : MonoBehaviour
         //meshRendererCargo.material = meshRendererCargo.material.name.StartsWith(originalMaterial.name) ? heightMaterial : originalMaterial;
 
         heightWarning?.SetActive(false);
-        buttonDriveBack?.SetActive(true);
+        driveBackPossibleHeight = true;
+        CheckIfDriveBackPossible();
     }
 }

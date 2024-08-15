@@ -18,7 +18,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Route/Prototyp/Level 1.unity
     guid: 99c9720ab356a0642a771bea13969a05
   - enabled: 1
-    path: Assets/Scenes/Minigame/Beladen.unity
+    path: Assets/Scenes/Minigame/Beladen1.unity
     guid: f22026e6d2c98684398052648e17dcdc
   - enabled: 1
     path: Assets/Scenes/Route/Route 1/Route 1.unity
